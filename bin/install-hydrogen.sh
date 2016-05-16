@@ -10,7 +10,7 @@ if test -n "$ERR"
 then echo "$ERR"
 else 
   sudo pip install jupyter 
-  curl -L -o jupyter-scala-2.10 https://git.io/vzhR7 && chmod +x jupyter-scala-2.10 && ./jupyter-scala-2.10 && rm -f jupyter-scala-2.10
+  curl -L -o jupyter-scala-2.10 https://git.io/vzhR7 && chmod +x jupyter-scala-2.10 && ./jupyter-scala-2.10 ; rm -f jupyter-scala-2.10
   curl -L -o jupyter-scala https://git.io/vzhRi && chmod +x jupyter-scala && ./jupyter-scala ; rm -f jupyter-scala
   test -e $BASE/project/atom/config.json || echo '"*":' >$BASE/project/atom/config.cson
   if apm install hydrogen
