@@ -22,4 +22,13 @@ EOF
   if ! apm install terminal-plus
   then echo "I cannot install terminal-plus"
   fi
+  if ! apm install atom-scalariform
+  then echo "I cannot install terminal-plus"
+  else
+     touch $BASE/project/atom/scalariform.properties
+     cat >>$BASE/project/atom/config.cson <<EOF
+  scalariform:
+    propertiesFile: "$BASE/project/atom/scalariform.properties"
+EOF
+  fi
 fi
