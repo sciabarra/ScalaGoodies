@@ -22,7 +22,7 @@ then docker run -d -p 5000:5000 \
         --cluster-dns=8.8.8.8 \
         --cluster-domain=loc \
         --allow-privileged --v=2
-   if docker-machine active 2>&1 >/dev/null  
+   if which docker-machine 2>/dev/null && docker-machine active 2>&1 >/dev/null  
    then docker-machine ssh `docker-machine active` -N -L 8080:localhost:8080 &
    fi
 fi
