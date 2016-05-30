@@ -1,4 +1,4 @@
-enablePlugins(DockerPlugin)
+enablePlugins(sbtdocker.DockerPlugin)
 
 imageNames in docker := Seq(ImageName("localhost:5000/akkahttp:latest"))
 
