@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: akkahttp-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: akkahttp
+    spec:
+      containers:
+      - name: akkahttp
+        image: localhost:5000/akkahttp
+        ports:
+        - containerPort: 9000

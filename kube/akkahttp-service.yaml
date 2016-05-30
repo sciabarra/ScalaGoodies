@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: akkahttp-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 9000
+    protocol: TCP
+  selector:
+    app: akkahttp
